@@ -57,9 +57,12 @@
     <!--TÍTULO  -->
     <section class="box-solutions">
       <h1 class="title-solutions">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
-      <button class="button-solutions" type="button">
+      <button data-modal-open class="button-solutions" type="button">
         solicite nuestro servicio
       </button>
+      <div class="backdrop is-hidden" data-modal>
+      <button data-modal-close></button>
+      </div>
     </section>
 
     <!-- Group 1 -->
@@ -377,5 +380,6 @@
       </address>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 
