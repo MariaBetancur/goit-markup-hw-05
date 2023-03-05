@@ -70,7 +70,7 @@ ul {
   height: 80px;
 }
 /* pagina estudio */
-.button-solutions {
+.data-modal-open {
   background: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -86,29 +86,78 @@ ul {
   color: #ffffff;
   padding: 10px 32px;
 }
-.button-solutions:hover {
+.data-modal-open:hover {
   background-color: var(--brand-color);
 }
-.button-solutions focus {
+.data-modal-open:focus {
   background-color: var(--brand-color);
 }
+/*ventana modal*/
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
-.backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
-nav ul li a {
+.modal {
+  width: 528px;
+  height: 581px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.form {
+  position: relative;
+}
+
+.data-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-solutions {
+  position: relative;
+}
+
+.box-solutions [data-modal] {
+  position: absolute;
+  top: calc(50% - 290.5px);
+  left: calc(50% - 264px);
+}
+
+.box-solutions .data-modal-open.is-active .backdrop {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+. nav ul li a {
   border-bottom: 3px solid transparent;
   padding: 32px 0;
 }
@@ -574,11 +623,13 @@ nav ul li a:hover {
 
 .list-found-at {
   display: inline-block;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffff;
   fill: solid #ffffff;
 }
+
 .icon-found-at {
   display: flex;
   align-items: center;
