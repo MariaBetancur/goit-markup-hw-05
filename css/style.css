@@ -70,6 +70,7 @@ ul {
   height: 80px;
 }
 /* pagina estudio */
+/*ventana modal*/
 .data-modal-open {
   background: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -92,7 +93,7 @@ ul {
 .data-modal-open:focus {
   background-color: var(--brand-color);
 }
-/*ventana modal*/
+
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
